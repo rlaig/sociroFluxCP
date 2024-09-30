@@ -2,16 +2,16 @@
 // This is the application configuration file. All values have been set to
 // the default, and should be changed as needed.
 return array(
-	'ServerAddress'				=> 'localhost',				// This value is the hostname:port under which Flux runs. (e.g., example.com or example.com:80)
-	'BaseURI'					=> 'fluxcp',						// The base URI is the base web root on which your application lies.
-	'InstallerPassword'			=> 'secretpassword',		// Installer/updater password.
+	'ServerAddress'				=> 'sociro.net',				// This value is the hostname:port under which Flux runs. (e.g., example.com or example.com:80)
+	'BaseURI'					=> '/',						// The base URI is the base web root on which your application lies.
+	'InstallerPassword'			=> 'electron3183',		// Installer/updater password.
 	'RequireOwnership'			=> true,					// Require the executing user to be owner of the FLUX_ROOT/data/ directory tree? (Better for security)
 															// WARNING: This will be mostly IGNORED on non-POSIX-compliant OSes (e.g. Windows).
 	'DefaultLoginGroup'			=> null,
 	'DefaultCharMapServer'		=> null,
 	'DefaultLanguage'			=> 'en_us',					// Specify the default control panel language (see FLUX_ROOT/lang/ directory for available languages.)
-	'SiteTitle'					=> 'Flux Control Panel',	// This value is only used if the theme decides to use it.
-	'ThemeName'					=> array('default', 'bootstrap'), // Names of the themes you would like list for use in the footer. Themes are in FLUX_ROOT/themes.
+	'SiteTitle'					=> 'sociRO Flux',	// This value is only used if the theme decides to use it.
+	'ThemeName'					=> array('default'), // Names of the themes you would like list for use in the footer. Themes are in FLUX_ROOT/themes.
 	'ScriptTimeLimit'			=> 0,						// Script execution time limit. Specifies (in seconds) how long a page should run before timing out. (0 means forever)
 	'MissingEmblemBMP'			=> 'empty.bmp',				//
 	'ItemIconNameFormat'		=> '%d.png',				// The filename format for item icons (defaults to {itemid}.png).
@@ -24,7 +24,7 @@ return array(
 	'EmblemUseWebservice'		=> true,					// Load emblems from WebService?
 	'SessionCookieExpire'		=> 48,						// Duration in hours.
 	'AdminMenuGroupLevel'		=> AccountLevel::LOWGM,		// The starting group ID for which module actions are moved into the admin menu for display.
-	'DateDefaultTimezone'		=> 'UTC',					// The default timezone, consult the PHP manual for valid timezones: http://php.net/timezones (null for defaut system TZ)
+	'DateDefaultTimezone'		=> 'Asia/Hong_Kong',					// The default timezone, consult the PHP manual for valid timezones: http://php.net/timezones (null for defaut system TZ)
 	'DateFormat'				=> 'Y-m-d',					// Default DATE format to be displayed in pages.
 	'DateTimeFormat'			=> 'Y-m-d H:i:s',			// Default DATETIME format to be displayed in pages.
 	'ShowSinglePage'			=> true,					// Whether or not to show the page numbers even if there's only one page.
@@ -67,23 +67,23 @@ return array(
 	'MailerSMTPHosts'			=> null,					// When MailerUseSMTP is true: A string host or array of hosts (e.g., 'host1' or array('host1', 'backuphost')).
 	'MailerSMTPUsername'		=> null,					// When MailerUseSMTP is true: Authorized username for SMTP server.
 	'MailerSMTPPassword'		=> null,					// When MailerUseSMTP is true: Authorized password for SMTP server (for above user).
-	'ServerStatusCache'			=> 2,						// Store a cached server status and refresh every X minutes.  Default: 2 minutes (value is measured in minutes).
-	'ServerStatusTimeout'		=> 2,						// For each server, spend X amount of seconds to determine whether it's up or not.
+	'ServerStatusCache'			=> 60,						// Store a cached server status and refresh every X minutes.  Default: 2 minutes (value is measured in minutes).
+	'ServerStatusTimeout'		=> 60,						// For each server, spend X amount of seconds to determine whether it's up or not.
 	'SessionKey'				=> 'fluxSessionData',		// Shouldn't be changed, just specifies the session key to be used for session data.
 	'DefaultModule'				=> 'main',					// This is the module to execute when none has been specified.
 	'DefaultAction'				=> 'index',					// This is the default action for any module, probably should leave this alone. (Deprecated)
-	'GzipCompressOutput'		=> false,					// Whether or not to compress output using zlib.
+	'GzipCompressOutput'		=> true,					// Whether or not to compress output using zlib.
 	'GzipCompressionLevel'		=> 9,						// zlib compression level. (1~9)
 	'OutputCleanHTML'			=> true,					// Use this if you have Tidy installed to clean your HTML output when serving pages.
-	'ShowCopyright'				=> true,					// Whether or not to show the copyright footer.
-	'ShowRenderDetails'			=> true,					// Shows the "page rendered in X seconds" and "number of queries executed: X" in the default theme.
-	'UseCleanUrls'				=> false,					// Set to true if you're running Apache and it supports mod_rewrite and .htaccess files.
+	'ShowCopyright'				=> false,					// Whether or not to show the copyright footer.
+	'ShowRenderDetails'			=> false,					// Shows the "page rendered in X seconds" and "number of queries executed: X" in the default theme.
+	'UseCleanUrls'				=> true,					// Set to true if you're running Apache and it supports mod_rewrite and .htaccess files.
 	'DebugMode'					=> false,					// Set to false to minimize technical details from being output by Flux. WARNING: DO NOT USE THIS OPTION ON A PUBLICALLY-ACCESSIBLE CP.
-	'UseCaptcha'				=> false,					// Use CAPTCHA image for account registration to prevent automated account creations. (Requires GD2/FreeType2)
-	'UseLoginCaptcha'			=> false,					// Use CAPTCHA image for account logins. (Requires GD2/FreeType2)
-	'EnableReCaptcha'			=> false,					// Enables the use of reCAPTCHA instead of Flux's native GD2 library (http://www.google.com/recaptcha)
-	'ReCaptchaPublicKey'		=> '...',					// This is your reCAPTCHA public key [REQUIRED FOR RECAPTCHA] (sign up at http://www.google.com/recaptcha)
-	'ReCaptchaPrivateKey'		=> '...',					// This is your reCAPTCHA private key [REQUIRED FOR RECAPTCHA] (sign up at http://www.google.com/recaptcha)
+	'UseCaptcha'				=> true,					// Use CAPTCHA image for account registration to prevent automated account creations. (Requires GD2/FreeType2)
+	'UseLoginCaptcha'			=> true,					// Use CAPTCHA image for account logins. (Requires GD2/FreeType2)
+	'EnableReCaptcha'			=> true,					// Enables the use of reCAPTCHA instead of Flux's native GD2 library (http://www.google.com/recaptcha)
+	'ReCaptchaPublicKey'		=> '6LfeEVMqAAAAAB9nTKXklTYpOZzARu_5vgDpMU6I',					// This is your reCAPTCHA public key [REQUIRED FOR RECAPTCHA] (sign up at http://www.google.com/recaptcha)
+	'ReCaptchaPrivateKey'		=> '6LfeEVMqAAAAALdseEp91rIfXQq1eQa47T1-wmTL',					// This is your reCAPTCHA private key [REQUIRED FOR RECAPTCHA] (sign up at http://www.google.com/recaptcha)
 	'ReCaptchaTheme'			=> 'light',					// ReCaptcha theme to use (Value: dark or light) (see: https://developers.google.com/recaptcha/docs/display#render_param)
 	'DisplaySinglePages'		=> true,					// Whether or not to display paging for single page results.
 	'ForwardYears'				=> 15,						// (Visual) The number of years to display ahead of the current year in date inputs.
@@ -97,7 +97,7 @@ return array(
 	'MoneyDecimalPlaces'		=> 2,						// (Visual) Number of decimal places to display in amount.
 	'MoneyThousandsSymbol'		=> ',',						// (Visual) Thousandths place separator (a period in European currencies).
 	'MoneyDecimalSymbol'		=> '.',						// (Visual) Decimal separator (a comma in European currencies).
-	'AcceptDonations'			=> true,					// Whether or not to accept donations.
+	'AcceptDonations'			=> false,					// Whether or not to accept donations.
 	'PayPalIpnUrl'				=> 'www.paypal.com',		// The ipnpb.paypal.com and ipnpb.sandbox.paypal.com endpoints only accept HTTPS connections. If you currently use www.paypal.com, you should move to ipnpb.paypal.com when you update your code to use HTTPS.
 	'PayPalBusinessEmail'		=> 'admin@localhost',		// Enter the e-mail under which you have registered your business account.
 	'PayPalReceiverEmails'		=> array(					// These are the receiver e-mail addresses who are allowed to receive payment.
@@ -254,46 +254,48 @@ return array(
 			'HomeLabel'			=> array('module' => 'main'),
 			//'ForumLabel'		=> array('exturl' => 'http://www.fluxro.com/community'),	// External forum link
 			//'ForumLabel'		=> array('module' => 'forums'), 						// Built-in forum link
-			'NewsLabel'			=> array('module' => 'news'),
+			//'NewsLabel'			=> array('module' => 'news'),
 			// Sample items for pages function.
 			'DownloadsLabel'		=> array('module' => 'pages','action'=>'content','param'=>array('path'=>'downloads')),
-			'RulesLabel'			=> array('module' => 'pages','action'=>'content','param'=>array('path'=>'rules')),
+			//'RulesLabel'			=> array('module' => 'pages','action'=>'content','param'=>array('path'=>'rules')),
 			// End sample items for pages function.
 		),
 		'AccountLabel'		=> array(
 			'AccountCreateHeading'		=> array('module' => 'account', 'action' => 'create'),
-			'LoginTitle'			=> array('module' => 'account', 'action' => 'login'),
-			'MyAccountLabel'	=> array('module' => 'account', 'action' => 'view'),
-			'HistoryLabel'		=> array('module' => 'history'),
-			'ServiceDeskLabel'	=> array('module' => 'servicedesk'),
-			'LogoutTitle'		=> array('module' => 'account', 'action' => 'logout'),
+			//'LoginTitle'			=> array('module' => 'account', 'action' => 'login'),
+			//'MyAccountLabel'	=> array('module' => 'account', 'action' => 'view'),
+			//'HistoryLabel'		=> array('module' => 'history'),
+			//'ServiceDeskLabel'	=> array('module' => 'servicedesk'),
+			//'LogoutTitle'		=> array('module' => 'account', 'action' => 'logout'),
 		),
-		'DonationsLabel'		=> array(
-			'PurchaseLabel'		=> array('module' => 'purchase'),
-			'DonateLabel'		=> array('module' => 'donate'),
-		),
+		//'DonationsLabel'		=> array(
+		//	'PurchaseLabel'		=> array('module' => 'purchase'),
+		//	'DonateLabel'		=> array('module' => 'donate'),
+		//),
 		'InformationLabel'	=> array(
-			'ServerInfoLabel'	=> array('module' => 'server', 'action' => 'info'),
+			//'ServerInfoLabel'	=> array('module' => 'server', 'action' => 'info'),
 			'ServerStatusLabel'	=> array('module' => 'server', 'action' => 'status'),
-			'WoeHoursLabel'		=> array('module' => 'woe'),
-			'CastlesLabel'		=> array('module' => 'castle'),
-			'WhosOnlineLabel'	=> array('module' => 'character', 'action' => 'online'),
-			'MapStaticsLabel'=> array('module' => 'character', 'action' => 'mapstats'),
-			'RankingInfoLabel'	=> array('module' => 'ranking', 'action' => 'character'),
-			'VendingInfoLabel'	=> array('module' => 'vending'),
-			'BuyingstoreInfoLabel'	=> array('module' => 'buyingstore'),
+			//'WoeHoursLabel'		=> array('module' => 'woe'),
+			//'CastlesLabel'		=> array('module' => 'castle'),
+			//'WhosOnlineLabel'	=> array('module' => 'character', 'action' => 'online'),
+			//'MapStaticsLabel'=> array('module' => 'character', 'action' => 'mapstats'),
+			//'RankingInfoLabel'	=> array('module' => 'ranking', 'action' => 'character'),
+			//'VendingInfoLabel'	=> array('module' => 'vending'),
+			//'BuyingstoreInfoLabel'	=> array('module' => 'buyingstore'),
 		),
-		'DatabaseLabel'		=> array(
+        /*
+        'DatabaseLabel'		=> array(
 			'ItemDatabaseLabel'	=> array('module' => 'item'),
 			'MobDatabaseLabel'	=> array('module' => 'monster'),
-		),
+        ),
 		'SocialLabel'		=> array(
 			'JoinUsInFacebookLabel'	=> array('exturl' => 'https://www.facebook.com/<change_me>'),
 			'RateUsOnRMSLabel'		=> array('exturl' => '<link_to_RMS>'),
 		),
 		'Service Desk'	=> array(
 			'ServiceDeskLabel'	=> array('module' => 'servicedesk', 'action' => 'staffindex'),
-		),
+        ),
+        */
 		'Misc. Stuff'	=> array(
 			'AccountLabel'		=> array('module' => 'account'),
 			'CharacterLabel'	=> array('module' => 'character'),
