@@ -4,11 +4,11 @@ final class AccountLevel {
 	const ANYONE =   -2;
 	const UNAUTH =   -1;
 	const NORMAL =    0;
-	const LOWGM  =    1;
-	const HIGHGM =    2;
+	const LOWGM  =   10;
+	const HIGHGM =   10;
 	const ADMIN  =   99;
 	const NOONE  = 9999;
-	
+
 	private static $groups = array(
 /**
  *	Syntax:
@@ -52,7 +52,7 @@ final class AccountLevel {
 	);
 
 	// DON'T TOUCH ANYTHING BELOW. THIS IS FOR DEVELOPERS.
-	
+
 	/**
 	 * Get array of all groups.
 	 *
@@ -62,9 +62,9 @@ final class AccountLevel {
    public static function getArray() {
         return self::$groups;
     }
-	
+
 	/**
-	 * Get array of group IDs that satisfy the operation 
+	 * Get array of group IDs that satisfy the operation
 	 * condition that compares the group level.
 	 *
 	 * @param int $compare
@@ -82,7 +82,7 @@ final class AccountLevel {
 		}
         return $group_id;
     }
-	
+
 	/**
 	 * Get the level associated with the group ID.
 	 *
@@ -98,7 +98,7 @@ final class AccountLevel {
 			return AccountLevel::NORMAL;
 		}
     }
-	
+
 	/**
 	 * Get the name associated with the group ID.
 	 *
