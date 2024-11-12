@@ -130,14 +130,14 @@
 		<table cellspacing="0" cellpadding="0" width="100%">
 			<tr>
 				<!-- Header -->
-				<td bgcolor="#8ebceb" width="20"></td>
-				<td bgcolor="#8ebceb" colspan="3">
+				<td bgcolor="#fdfdbf" width="20"></td>
+				<td bgcolor="#fdfdbf" colspan="3" style="text-align:center;">
 					<a href="<?php echo $this->basePath ?>">
 						<!--<img src="<?php echo $this->themePath($session->account->group_level >= Flux::config('AdminMenuGroupLevel') ? 'img/logo_admin.gif' : 'img/logo.gif') ?>" id="logo" />-->
-                        <?php echo $session->account->group_level >= Flux::config('AdminMenuGroupLevel') ? '' : '<img src="' . $this->themePath('img/logo.gif') . '" id="logo"/>' ?>
+                        <?php echo $session->account->group_level >= Flux::config('AdminMenuGroupLevel') ? '' : '<img style="height: 150px;" src="' . $this->themePath('img/logo.png') . '" id="logo"/>' ?>
                     </a>
 				</td>
-				<td bgcolor="#8ebceb" width="20"></td>
+				<td bgcolor="#fdfdbf" width="20"></td>
 			</tr>
 			<tr>
 				<!-- Spacing between header and content -->

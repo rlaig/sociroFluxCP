@@ -60,52 +60,52 @@ return array(
 		),
 		'CharMapServers' => array(
 			array(
-				'ServerName'      => 'sociRO',
+				'ServerName'      => 'Apheleia',
 				'Renewal'         => true,
 				'MaxCharSlots'    => 9,
 				'DateTimezone'    => null, // Specifies game server's timezone for this char/map pair. (See: http://php.net/timezones)
 				//'ResetDenyMaps'   => 'sec_pri', // Defaults to 'sec_pri'. This value can be an array of map names.
 				//'Database'        => 'ragnarok', // Defaults to DbConfig.Database
 				'ExpRates' => array(
-					'Base'        => 1000, // Rate at which (base) exp is given
-					'Job'         => 1000, // Rate at which job exp is given
-					'Mvp'         => 1000  // MVP bonus exp rate
+					'Base'        => 10000, // Rate at which (base) exp is given
+					'Job'         => 10000, // Rate at which job exp is given
+					'Mvp'         => 10000  // MVP bonus exp rate
 				),
 				'DropRates' => array(
 					// If drop rate was below this amount and bonus is applied to it, the bonus can't make it exceed this amount.
 					'DropRateCap' => 9000,
 					// The rate the common items (in the ETC tab, besides card) are dropped
-					'Common'      => 100,
-					'CommonBoss'  => 100,
-					'CommonMVP'   => 100,
+					'Common'      => 10000,
+					'CommonBoss'  => 10000,
+					'CommonMVP'   => 10000,
 					'CommonMin'   => 1,
 					'CommonMax'   => 10000,
 					// The rate healing items (that restore HP or SP) are dropped
-					'Heal'        => 100,
-					'HealBoss'    => 100,
-					'HealMVP'     => 100,
+					'Heal'        => 10000,
+					'HealBoss'    => 10000,
+					'HealMVP'     => 10000,
 					'HealMin'     => 1,
 					'HealMax'     => 10000,
 					// The rate usable items (in the item tab other then healing items) are dropped
-					'Useable'     => 100,
-					'UseableBoss' => 100,
-					'UseableMVP'  => 100,
+					'Useable'     => 10000,
+					'UseableBoss' => 10000,
+					'UseableMVP'  => 10000,
 					'UseableMin'  => 1,
 					'UseableMax'  => 10000,
 					// The rate at which equipment is dropped
-					'Equip'       => 100,
-					'EquipBoss'   => 100,
-					'EquipMVP'    => 100,
+					'Equip'       => 10000,
+					'EquipBoss'   => 10000,
+					'EquipMVP'    => 10000,
 					'EquipMin'    => 1,
 					'EquipMax'    => 10000,
 					// The rate at which cards are dropped
-					'Card'        => 100,
-					'CardBoss'    => 100,
-					'CardMVP'     => 100,
+					'Card'        => 10000,
+					'CardBoss'    => 10000,
+					'CardMVP'     => 10000,
 					'CardMin'     => 1,
 					'CardMax'     => 10000,
 					// The rate adjustment for the MVP items that the MVP gets directly in their inventory
-					'MvpItem'     => 100,
+					'MvpItem'     => 10000,
 					'MvpItemMin'  => 1,
 					'MvpItemMax'  => 10000,
 					// 0 - official order (Show message "Note: Only one MVP drop will be rewarded.") , 2 - all items

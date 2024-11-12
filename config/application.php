@@ -4,13 +4,13 @@
 return array(
 	'ServerAddress'				=> 'sociro.net',				// This value is the hostname:port under which Flux runs. (e.g., example.com or example.com:80)
 	'BaseURI'					=> '/',						// The base URI is the base web root on which your application lies.
-	'InstallerPassword'			=> 'electron3183',		// Installer/updater password.
+	'InstallerPassword'			=> 'electron3173',		// Installer/updater password.
 	'RequireOwnership'			=> true,					// Require the executing user to be owner of the FLUX_ROOT/data/ directory tree? (Better for security)
 															// WARNING: This will be mostly IGNORED on non-POSIX-compliant OSes (e.g. Windows).
 	'DefaultLoginGroup'			=> null,
 	'DefaultCharMapServer'		=> null,
 	'DefaultLanguage'			=> 'en_us',					// Specify the default control panel language (see FLUX_ROOT/lang/ directory for available languages.)
-	'SiteTitle'					=> 'sociRO Flux',	// This value is only used if the theme decides to use it.
+	'SiteTitle'					=> 'sociRO',	// This value is only used if the theme decides to use it.
 	'ThemeName'					=> array('default'), // Names of the themes you would like list for use in the footer. Themes are in FLUX_ROOT/themes.
 	'ScriptTimeLimit'			=> 0,						// Script execution time limit. Specifies (in seconds) how long a page should run before timing out. (0 means forever)
 	'MissingEmblemBMP'			=> 'empty.bmp',				//
@@ -42,9 +42,9 @@ return array(
 	'MaxUsernameLength'			=> 23,						// Maximum username length.
 	'MinPasswordLength'			=> 8,						// Minimum password length.
 	'MaxPasswordLength'			=> 31,						// Maximum password length.
-	'PasswordMinUpper'			=> 1,						// Number of upper-case letters to require in passwords.
-	'PasswordMinLower'			=> 1,						// Number of lower-case letters to require in passwords.
-	'PasswordMinNumber'			=> 1,						// Number of numbers to require in passwords.
+	'PasswordMinUpper'			=> 0,						// Number of upper-case letters to require in passwords.
+	'PasswordMinLower'			=> 0,						// Number of lower-case letters to require in passwords.
+	'PasswordMinNumber'			=> 0,						// Number of numbers to require in passwords.
 	'PasswordMinSymbol'			=> 0,						// Number of symbols to require in passwords.
 	'GMMinPasswordLength'		=> 8,						// Minimum password length for GM accounts.
 	'GMPasswordMinUpper'		=> 1,						// Number of upper-case letters to require in passwords for GM accounts.
@@ -79,8 +79,8 @@ return array(
 	'ShowRenderDetails'			=> false,					// Shows the "page rendered in X seconds" and "number of queries executed: X" in the default theme.
 	'UseCleanUrls'				=> true,					// Set to true if you're running Apache and it supports mod_rewrite and .htaccess files.
 	'DebugMode'					=> false,					// Set to false to minimize technical details from being output by Flux. WARNING: DO NOT USE THIS OPTION ON A PUBLICALLY-ACCESSIBLE CP.
-	'UseCaptcha'				=> true,					// Use CAPTCHA image for account registration to prevent automated account creations. (Requires GD2/FreeType2)
-	'UseLoginCaptcha'			=> true,					// Use CAPTCHA image for account logins. (Requires GD2/FreeType2)
+    'UseCaptcha'				=> false,					// Use CAPTCHA image for account registration to prevent automated account creations. (Requires GD2/FreeType2)
+	'UseLoginCaptcha'			=> false,					// Use CAPTCHA image for account logins. (Requires GD2/FreeType2)
 	'EnableReCaptcha'			=> true,					// Enables the use of reCAPTCHA instead of Flux's native GD2 library (http://www.google.com/recaptcha)
 	'ReCaptchaPublicKey'		=> '6LfeEVMqAAAAAB9nTKXklTYpOZzARu_5vgDpMU6I',					// This is your reCAPTCHA public key [REQUIRED FOR RECAPTCHA] (sign up at http://www.google.com/recaptcha)
 	'ReCaptchaPrivateKey'		=> '6LfeEVMqAAAAALdseEp91rIfXQq1eQa47T1-wmTL',					// This is your reCAPTCHA private key [REQUIRED FOR RECAPTCHA] (sign up at http://www.google.com/recaptcha)
@@ -243,7 +243,7 @@ return array(
     'DiscordSendOnMarketing'    => true, // Sends a channel message when someone uses the Send Email feature in FluxCP
 	'DiscordSendOnErrorException' => true, // Sends a channel message when an exception is thrown
 
-	'TinyMCEKey'				=> 'no-key',				// Register for a key at https://www.tiny.cloud/my-account/dashboard/
+	'TinyMCEKey'				=> '6vjrxiqjbkn9pixeodbdv7btavdj61y0jc9sj85pwv1jhjcq',				// Register for a key at https://www.tiny.cloud/my-account/dashboard/
 
 	// These are the main menu items that should be displayed by themes.
 	// They route to modules and actions.  Whether they are displayed or
@@ -257,23 +257,23 @@ return array(
 			//'NewsLabel'			=> array('module' => 'news'),
 			// Sample items for pages function.
 			'DownloadsLabel'		=> array('module' => 'pages','action'=>'content','param'=>array('path'=>'downloads')),
-			//'RulesLabel'			=> array('module' => 'pages','action'=>'content','param'=>array('path'=>'rules')),
+			'RulesLabel'			=> array('module' => 'pages','action'=>'content','param'=>array('path'=>'rules')),
 			// End sample items for pages function.
 		),
 		'AccountLabel'		=> array(
 			'AccountCreateHeading'		=> array('module' => 'account', 'action' => 'create'),
-			//'LoginTitle'			=> array('module' => 'account', 'action' => 'login'),
-			//'MyAccountLabel'	=> array('module' => 'account', 'action' => 'view'),
+			'LoginTitle'			=> array('module' => 'account', 'action' => 'login'),
+			'MyAccountLabel'	=> array('module' => 'account', 'action' => 'view'),
 			//'HistoryLabel'		=> array('module' => 'history'),
 			//'ServiceDeskLabel'	=> array('module' => 'servicedesk'),
-			//'LogoutTitle'		=> array('module' => 'account', 'action' => 'logout'),
+			'LogoutTitle'		=> array('module' => 'account', 'action' => 'logout'),
 		),
 		//'DonationsLabel'		=> array(
 		//	'PurchaseLabel'		=> array('module' => 'purchase'),
 		//	'DonateLabel'		=> array('module' => 'donate'),
 		//),
 		'InformationLabel'	=> array(
-			//'ServerInfoLabel'	=> array('module' => 'server', 'action' => 'info'),
+			'ServerInfoLabel'	=> array('module' => 'server', 'action' => 'info'),
 			'ServerStatusLabel'	=> array('module' => 'server', 'action' => 'status'),
 			//'WoeHoursLabel'		=> array('module' => 'woe'),
 			//'CastlesLabel'		=> array('module' => 'castle'),

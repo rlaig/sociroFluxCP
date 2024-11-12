@@ -28,3 +28,8 @@
 
 # Import Configs
 /config/import
+
+# do not upload section
+/config/application.php
+/config/servers.php
+/config/donotupload

@@ -11,6 +11,9 @@
 			</td>
         <?php endif ?>
         -->
+		<td rowspan="11" style="width: 150px; text-align: center; vertical-alignment: middle">
+            <img src="https://chargen.sociro.net/character/<?php echo htmlspecialchars($char->char_name); ?>/0/0" />
+		</td>
 		<th>Character ID</th>
 		<td colspan="2"><?php echo htmlspecialchars($char->char_id) ?></td>
 		<th>Account ID</th>
